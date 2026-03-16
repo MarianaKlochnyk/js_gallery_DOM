@@ -4,15 +4,15 @@ const image = document.querySelectorAll('.list-item');
 const mainImage = document.querySelector('.gallery__large-img');
 
 image.forEach((img) => {
-  img.addEventListener('click', (event) => {
-    event.preventDefault();
+  img.addEventListener('click', (e) => {
+    e.preventDefault();
 
     let newSrc;
 
-    if (event.target.tagName === 'IMG') {
-      newSrc = event.target.parentNode.href;
-    } else if (event.target.tagName === 'A') {
-      newSrc = event.target.href;
+    if (e.target.tagName === 'IMG') {
+      newSrc = e.target.parentNode.href;
+    } else if (e.target.tagName === 'A') {
+      newSrc = e.target.href;
     }
 
     mainImage.src = newSrc;
