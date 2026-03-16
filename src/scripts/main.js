@@ -4,7 +4,7 @@ const image = document.querySelectorAll('.list-item');
 const mainImage = document.querySelector('.gallery__large-img');
 
 image.forEach((img) => {
-  img.addEventListener('click', () => {
+  img.addEventListener('click', (event) => {
     event.preventDefault();
 
     let newSrc;
